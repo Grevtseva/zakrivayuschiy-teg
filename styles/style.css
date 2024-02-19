@@ -163,7 +163,6 @@
 
 .button {
   border: none;
-  outline: none;
   position: relative;
   color: var(--main-color);
   background-color: var(--bg-color);
@@ -232,7 +231,7 @@
   text-align: center;
   width: 130px;
   height: 38px;
-  padding: 7px 0;
+  padding: 9px 17px;
   overflow: hidden;
 
 }
@@ -267,12 +266,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 20px;
+  padding: 17px 20px;
   color: currentColor;
   min-width: 335px;
   min-height: 51px;
   max-height: 80px;
-  padding: 9px 17px;
+
 }
 
 .footer {
