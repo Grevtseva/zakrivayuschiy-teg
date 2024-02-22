@@ -61,10 +61,15 @@
   text-transform: uppercase;
 }
 
+.header__theme-menu {
+  padding-left: 18px;
+}
+
 .theme-menu__list {
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:flex-start;
   gap: 14px;
   margin-block-end: 25px;
   position: relative;
