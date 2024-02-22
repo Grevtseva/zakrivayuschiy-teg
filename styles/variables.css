@@ -19,6 +19,7 @@
 
     a.logo {
         font-size: clamp(2.625rem, 0.5385rem + 10.7692vw, 3.0625rem);
+        margin-block-start: 120px;
     }
 
     .save-button {
@@ -26,10 +27,12 @@
         flex-direction: column;
         align-items: center;
         gap: 8px;
+        padding: 15px 20px;
     }
 
     .save-icon {
         width: 28px;
         height: 28px;
     }
+
 }
