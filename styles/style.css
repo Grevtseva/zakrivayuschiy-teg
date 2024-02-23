@@ -362,7 +362,7 @@
   width: 39px;
   height: 39px;
   color: var(--main-color);
-  align-items:self-start
+  align-items:self-start;
   mix-blend-mode: difference;
 
 }
