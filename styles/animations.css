@@ -12,7 +12,7 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-@keyframes slideUnderlineFromLeft {
+/*@keyframes slideUnderlineFromLeft {
     0% {
         scale: 0 1;
     }
@@ -20,7 +20,7 @@
     100% {
         scale: 1 1;
     }
-}
+}*/
 
 @keyframes movementTriangleHorizon {
     0% {
@@ -96,7 +96,7 @@
 
 .like-icon.is-liked .heart {
     transform-origin: center;
-    animation: heart 0.3s 0.1s ease-in;
+    animation: heart 0.3s 0.1s ease-in 1 alternate;
 }
 
 @keyframes sparks {
@@ -110,7 +110,7 @@
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s ease-in;
+    animation: sparks 0.3s 0.3s ease-in 1 alternate;
 }
 
 .like-icon .contour {

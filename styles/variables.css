@@ -17,28 +17,3 @@
     repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
     linear-gradient(#007f0c 0.01%, #004306);
 }
-
-@media (width <=375px) {
-    :root {
-        --width-card: 100%;
-    }
-
-    a.logo {
-        font-size: clamp(2.625rem, 0.5385rem + 10.7692vw, 3.0625rem);
-        margin-block-start: 120px;
-    }
-
-    .save-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 15px 20px;
-    }
-
-    .save-icon {
-        width: 28px;
-        height: 28px;
-    }
-
-}
