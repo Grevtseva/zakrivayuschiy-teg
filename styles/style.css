@@ -17,8 +17,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-color: var(--bg-color);
-  color: var(--main-color);
+  background-color: var(--bg-color,#000000);
+  color: var(--main-color, #00CC14);
   font-family: var(--font), sans-serif;
   font-variation-settings: 'wght' var(--font-weight);
   background-image: var(--fon-gradient);
@@ -33,8 +33,8 @@
   align-items: center;
   margin-top: 102px;
   margin-bottom: 102px;
-  outline: 2px solid var(--main-color, #000);
-  background-color: var(--bg-color, #fff);
+  outline: 2px solid var(--main-color, #00CC14);
+  background-color: var(--bg-color, #000000);
 }
 
 .content {
@@ -134,8 +134,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  outline: 2px solid var(--stroke-color,);
-  background-color: var(--bg-color, #fff);
+  outline: 2px solid var(--stroke-color, #00cc14);
+  background-color: var(--bg-color, #000000);
   border-top: none;
   margin-block-end: 51px;
 }
@@ -150,14 +150,14 @@
   font-variation-settings: 'wght' var(--font-weight-accent);
   background-color: var(--bg-color, #fff);
   padding: 4px 10px 6px 10px;
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color, #00CC14);
 }
 
 .image {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  }
+}
 
 .filter-invert {
   filter: invert(0.9);
@@ -196,13 +196,11 @@
   width: 100%;
   outline: none;
   position: relative;
-  background-color: #fff;
-
 }
 
 .label {
-  color: var(--main-color);
-  font-family: var(--font-accent);
+  color: var(--main-color, #00CC14);
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -211,14 +209,14 @@
   position: absolute;
   right: 25px;
   top: 25px;
-  text-shadow: 0 0 1px var(--stroke-label-color, #FFF);
+  text-shadow: 0 0 1px var(--stroke-label-color, #000000);
   opacity: 0.5;
   mix-blend-mode: hard-light;
 }
 
-@supports((text-stroke: var(--stroke-label-color)) or (-webkit-text-stroke: 1px var(--stroke-label-color))) {
+@supports((text-stroke: var(--stroke-label-color, #000000)) or (-webkit-text-stroke: 1px var(--stroke-label-color, #000000))) {
   .label {
-    -webkit-text-stroke: 1px var(--stroke-label-color);
+    -webkit-text-stroke: 1px var(--stroke-label-color, #000000);
     text-shadow: none;
   }
 }
@@ -233,7 +231,7 @@
   gap: 27px;
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--main-color);
+  border-top: 2px solid var(--main-color, #00CC14);
 }
 
 .content__paragraph {
@@ -247,9 +245,9 @@
 .button {
   border: none;
   position: relative;
-  color: var(--button-text-color,#FFFFFF);
-  background-color: var(--button-bg-color);
-  outline: 2px solid var(--main-color, #000);
+  color: var(--button-text-color, #00cc14);
+  background-color: var(--button-bg-color, #000000);
+  outline: 2px solid var(--main-color, #00CC14);
   cursor: pointer;
 }
 
@@ -260,14 +258,14 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--main-color, #000000);
+  background-color: var(--main-color, #00CC14);
   transition: 0.5s ease-in-out;
   transform-origin: left center;
   transform: scaleX(0);
 }
 
 .button:hover {
-  color: var(--bg-color, #FFFFFF);
+  color: var(--bg-color, #000000);
   transition: color 1s ease;
 }
 
@@ -275,14 +273,10 @@
   transform: scaleX(1);
 }
 
-.button:focus {
-  /* outline: none; */
-}
-
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--main-color);
-  border: 2px solid var(--main-color);
-  outline: none;  
+  box-shadow: 2px 2px 0px 0px var(--main-color, #00CC14);
+  border: 2px solid var(--main-color, #00CC14);
+  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -295,7 +289,7 @@
 
 .card__icon-button {
   border: none;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #000000);
   height: 36px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -308,7 +302,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--main-color);
+  outline: 2px solid var(--main-color, #00CC14);
 }
 
 .card__like-button {
@@ -321,11 +315,12 @@
 
 .button__text {
   font-family: var(--font-accent), fantasy;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #00cc14);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 90%; /* 12.6px */
+  line-height: 90%;
+  /* 12.6px */
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -341,7 +336,7 @@
   min-height: 21px;
   z-index: 1;
   mix-blend-mode: difference;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #00cc14);
 }
 
 .save-button {
@@ -350,11 +345,11 @@
   align-items: center;
   padding: 17px 20px;
   gap: 8px;
-  color: var(--button-text-color, #ffffff);
+  color: var(--button-text-color, #00cc14);
   min-width: 306px;
   min-height: 51px;
   max-height: 80px;
- 
+
 }
 
 .footer {
@@ -368,8 +363,8 @@
   position: fixed;
   inset: 0;
   margin: auto;
-  background-color: var(--bg-color, #ffffff);
-  border: 2px solid var(--main-color, #000000);
+  background-color: var(--bg-color, #000000);
+  border: 2px solid var(--main-color, #00CC14);
   padding: 31px;
 }
 
@@ -392,25 +387,26 @@
   flex-shrink: 0;
   width: 39px;
   height: 39px;
-  color: var(--main-color);
-  align-items:self-start;
+  color: var(--main-color, #00CC14);
+  align-items: self-start;
   mix-blend-mode: normal;
 }
 
 #dialog-id .button {
   grid-area: butt;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #00cc14);
   padding: 9px 17px;
   text-transform: uppercase;
 }
 
 .dialog-text {
-  color: var(--main-color);
-  font-family: var(--font-accent);
+  color: var(--main-color, #00CC14);
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 21px */
+  line-height: 150%;
+  /* 21px */
   text-transform: uppercase;
   grid-area: text;
   max-width: 234px;
@@ -418,5 +414,5 @@
 
 #dialog-id::backdrop {
   opacity: 0.75;
-  background: #000;
+  background: var(--bg-color, #000);
 }
