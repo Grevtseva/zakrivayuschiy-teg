@@ -33,7 +33,7 @@
   align-items: center;
   margin-top: 102px;
   margin-bottom: 102px;
-  outline: 2px solid var(--main-color, #00CC14);
+  border: 2px solid var(--main-color, #00CC14);
   background-color: var(--bg-color, #000000);
 }
 
@@ -83,7 +83,6 @@
   background-color: transparent;
   transition: 0.3s ease;
   border: none;
-  outline: none;
   position: relative;
   cursor: pointer;
   padding: 0;
@@ -193,7 +192,6 @@
 .box-image {
   display: grid;
   width: 100%;
-  outline: none;
   position: relative;
   aspect-ratio: 1/1;
 }
@@ -228,19 +226,15 @@
   font-size: 18px;
   line-height: 116.667%;
   /* 21px */
-  padding: 27px;
-  gap: 27px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   border-top: 2px solid var(--main-color, #00CC14);
 }
 
-.content__paragraph {
-  gap: 27px;
-}
-
-.card-text:last-of-type {
-  padding-top: 25px;
+.content__paragraph:last-of-type {
+  padding-bottom: 25px;
+  padding-top: 27px;
 }
 
 .button {
@@ -287,16 +281,17 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-
+  gap: 5px;
 }
 
 .card__icon-button {
   border: none;
   background-color: var(--bg-color, #000000);
-  height: 39px;
+  height: 38px;
   cursor: pointer;
   transition: 0.3s ease;
   padding: 0;
+  vertical-align: bottom;
 }
 
 .card__icon-button:focus {
@@ -304,13 +299,13 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--main-color, #00CC14);
+  border: 2px solid var(--main-color, #00CC14);
 }
 
 .card__like-button {
   text-align: center;
   width: 130px;
-  min-height: 38px;
+  height: 38px;
   padding: 9px 17px;
   overflow: hidden;
   align-self: flex-end;
