@@ -249,6 +249,7 @@
   color: var(--button-text-color, #00cc14);
   background-color: var(--button-bg-color, #000000);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -279,7 +280,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--main-color, #00CC14);
-  transition: box-shadow 0.3s ease;
 }
 
 .buttons {
