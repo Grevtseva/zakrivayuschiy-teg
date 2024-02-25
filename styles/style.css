@@ -133,9 +133,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  outline: 2px solid var(--stroke-color, #00cc14);
+  border: 2px solid var(--stroke-color, #00cc14);
   background-color: var(--bg-color, #000000);
-  border-top: none;
   margin-block-end: 51px;
 }
 
